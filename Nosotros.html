@@ -1,0 +1,288 @@
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Nosotros</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+
+.hero {
+    position: relative;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.hero img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.2));
+}
+
+
+.hero-content {
+    position: relative;
+    color: white;
+    text-align: center;
+    animation: fadeUp 1.2s ease;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+
+.btn-hero {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 30px;
+    background: white;
+    color: black;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+    background: #3a5a40;
+    color: white;
+    transform: scale(1.05);
+}
+
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.esencia {
+    padding: 80px 20px;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+.esencia h2 {
+    font-size: 32px;
+}
+
+.esencia p {
+    max-width: 700px;
+    margin: 20px auto;
+    color: #555;
+}
+
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    width: 320px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    color: #3a5a40;
+    margin-bottom: 10px;
+}
+
+
+footer {
+    text-align: center;
+    padding: 50px;
+    background: #111;
+    color: white;
+}
+
+.fb-btn {
+    display: inline-block;
+    margin-top: 15px;
+    background: #1877f2;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.fb-btn:hover {
+    background: #0d5ed7;
+    transform: scale(1.1);
+}
+
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 32px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<div class="logo">BambooZen</div>
+
+<nav>
+<a href="index.html">Inicio</a>
+<a href="nosotros.html">Nosotros</a>
+<a href="tienda.html">Tienda</a>
+<a href="carrito.html">Carrito 🛒</a>
+</nav>
+</header>
+
+
+<section class="hero">
+
+<img src="https://portal-ambiental.com/wp-content/uploads/2021/05/Everbrush-zoom-out-v2-1.gif">
+
+<div class="hero-content">
+<h1>BambooZen</h1>
+<p>Cuidamos tu sonrisa y el planeta 🌱</p>
+</div>
+
+</section>
+
+
+<section class="esencia">
+
+<h2>Nuestra Esencia</h2>
+
+<p>
+En <b>BambooZen</b> ofrecemos productos ecológicos de alta calidad importados desde Japón 🇯🇵,
+combinando innovación, sostenibilidad y bienestar.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>🌿 Nuestra Misión</h3>
+<p>
+Promover una higiene bucal saludable mientras cuidamos el planeta,
+con productos sostenibles y responsables.
+</p>
+</div>
+
+<div class="card">
+<h3>🌍 Nuestra Visión</h3>
+<p>
+Ser una marca líder en productos ecológicos, reduciendo el impacto del plástico en el mundo.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+  <h3>Contacto</h3>
+
+  <!-- Icono de correo -->
+  <p>
+    <a href="mailto:bamboozen6@gmail.com" class="icon email">
+      <i class="fa-solid fa-envelope"></i> bamboozen6@gmail.com
+    </a>
+  </p>
+
+  <!-- Icono de Facebook -->
+  <p>
+    <a href="https://www.facebook.com/people/bamboozen/61582193074768/" target="_blank" class="icon facebook">
+      <i class="fa-brands fa-facebook"></i> Facebook
+    </a>
+  </p>
+
+</footer>
+
+<!-- Font Awesome (IMPORTANTE) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+footer a:hover {
+  color: #1da1f2;
+}
+
+.icon i {
+  font-size: 22px;
+}
+
+.email:hover {
+  color: #d44638;
+}
+
+.facebook:hover {
+  color: #1877f2;
+}
+</style>
+</html>

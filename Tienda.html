@@ -1,0 +1,226 @@
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tienda - BambooZen</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f8f8f8;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #3a5a40;
+}
+
+
+.productos {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+.card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.4s;
+    animation: fadeUp 0.8s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 15px 0 5px;
+}
+
+.card p {
+    color: #777;
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+.precio {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.card button {
+    margin: 15px 0 20px;
+    padding: 12px 20px;
+    border: none;
+    background: #3a5a40;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background: #2d4731;
+}
+
+
+@keyframes fadeUp {
+    from {opacity:0; transform:translateY(40px);}
+    to {opacity:1; transform:translateY(0);}
+}
+
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #111;
+    color: white;
+}
+
+.icon {
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+.email:hover { color: #d44638; }
+.facebook:hover { color: #1877f2; }
+
+</style>
+</head>
+
+<body>
+
+
+<header>
+<div class="logo">BambooZen</div>
+
+<nav>
+<a href="index.html">Inicio</a>
+<a href="nosotros.html">Nosotros</a>
+<a href="tienda.html">Tienda</a>
+<a href="carrito.html">Carrito 🛒</a>
+</nav>
+</header>
+
+<section class="productos">
+<h2>Nuestra Tienda</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="basicos.jpeg">
+<h3>Cepillo Bambú Clásico</h3>
+<p>Cepillo ecológico con bambú natural.</p>
+<div class="precio">$70</div>
+<button onclick="agregarCarrito('Cepillo Bambú Clásico', 70)">
+Agregar 🛒
+</button>
+</div>
+
+
+<div class="card">
+<img src="kids.jpeg">
+<h3>Cepillo Kids</h3>
+<p>Especial para niños, cerdas suaves.</p>
+<div class="precio">$60</div>
+<button onclick="agregarCarrito('Cepillo Kids', 60)">
+Agregar 🛒
+</button>
+</div>
+
+
+<div class="card">
+<img src="Paq.familiar.jpeg">
+<h3>Pack Familiar</h3>
+<p>10 cepillos ecológicos.</p>
+<div class="precio">$399</div>
+<button onclick="agregarCarrito('Pack Familiar', 399)">
+Agregar 🛒
+</button>
+</div>
+
+</div>
+</section>
+
+
+<footer>
+
+<h3>Contacto</h3>
+
+<p>
+<a href="mailto:bamboozen6@gmail.com" class="icon email">
+<i class="fa-solid fa-envelope"></i> bamboozen6@gmail.com
+</a>
+</p>
+
+<p>
+<a href="https://www.facebook.com/people/bamboozen/61582193074768/" target="_blank" class="icon facebook">
+<i class="fa-brands fa-facebook"></i> Facebook
+</a>
+</p>
+
+</footer>
+
+<script>
+
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+function agregarCarrito(nombre, precio) {
+    carrito.push({ nombre, precio });
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    alert(nombre + " agregado al carrito 🛒");
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Carrito - BambooZen</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+
+<header>
+<div class="logo">BambooZen</div>
+
+<nav>
+<a href="index.html">Inicio</a>
+<a href="nosotros.html">Nosotros</a>
+<a href="tienda.html">Tienda</a>
+<a href="carrito.html">Carrito 🛒</a>
+</nav>
+</header>
+
+
+<section class="carrito">
+
+<h2>Tu carrito 🛒</h2>
+
+<ul id="lista"></ul>
+
+<h3>Total: $<span id="total">0</span></h3>
+
+<div class="pago">
+
+<h3>Método de pago</h3>
+
+<div class="pago-options">
+
+<label>
+<input type="radio" name="pago" value="tarjeta"> 💳 Tarjeta
+</label>
+
+<label>
+<input type="radio" name="pago" value="paypal"> 🅿️ PayPal
+</label>
+
+<label>
+<input type="radio" name="pago" value="efectivo"> 💵 Efectivo
+</label>
+
+</div>
+
+<button class="btn-finalizar" onclick="finalizarCompra()">
+Finalizar compra
+</button>
+
+</div>
+
+</section>
+
+
+<section class="formulario">
+
+<h2>Opinión</h2>
+
+<form>
+<input type="text" placeholder="Tu nombre" required><br><br>
+<input type="email" placeholder="Tu correo" required><br><br>
+<textarea placeholder="Escribe tu mensaje..." required></textarea><br><br>
+<button type="submit">Enviar</button>
+</form>
+
+</section>
+
+
+<footer>
+
+<h3>Contacto</h3>
+
+<p>
+<a href="mailto:bamboozen6@gmail.com" class="icon email">
+<i class="fa-solid fa-envelope"></i> bamboozen6@gmail.com
+</a>
+</p>
+
+<p>
+<a href="https://www.facebook.com/people/bamboozen/61582193074768/" target="_blank" class="icon facebook">
+<i class="fa-brands fa-facebook"></i> Facebook
+</a>
+</p>
+
+</footer>
+
+
+<script src="carrito.js"></script>
+
+
+<script>
+function finalizarCompra() {
+
+let metodo = document.querySelector('input[name="pago"]:checked');
+
+if (!metodo) {
+  alert("Selecciona un método de pago");
+  return;
+}
+
+let items = document.querySelectorAll("#lista li");
+
+if (items.length === 0) {
+  alert("Tu carrito está vacío");
+  return;
+}
+
+alert("Compra realizada con " + metodo.value + " 🛒\nGracias por BambooZen 🌱");
+
+localStorage.removeItem("carrito");
+location.reload();
+
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,237 @@
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BambooZen - Higiene Dental Ecológica</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #F6F2E8;
+}
+
+.text-bamboo-green { color: #3a5a40; }
+.bg-bamboo-green { background-color: #3a5a40; }
+
+.fade-up {
+  animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.flip-card {
+  width: 260px;
+  height: 320px;
+  perspective: 1000px;
+}
+
+.flip-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.flip-card:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  backface-visibility: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.flip-front {
+  background: #3a5a40;
+  color: white;
+  padding: 20px;
+}
+
+
+.flip-back {
+  transform: rotateY(180deg);
+  background: white;
+}
+
+.flip-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+
+.icon {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.icon i {
+  font-size: 22px;
+}
+
+.email:hover { color: #d44638; }
+.facebook:hover { color: #1877f2; }
+
+.icon:hover {
+  color: #1da1f2;
+}
+</style>
+</head>
+
+<body class="text-gray-800">
+
+
+<nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 shadow-sm">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+
+<div class="text-2xl font-bold text-bamboo-green">
+BambooZen
+</div>
+
+<div class="hidden md:flex space-x-8 font-medium">
+<a href="index.html" class="hover:text-bamboo-green">Inicio</a>
+<a href="Nosotros.html" class="hover:text-bamboo-green">Nosotros</a>
+<a href="Tienda.html" class="hover:text-bamboo-green">Tienda</a>
+<a href="carrito.html" class="hover:text-bamboo-green">Carrito 🛒</a>
+</div>
+
+<a href="Carrito.html"
+class="bg-bamboo-green text-white px-5 py-2 rounded-full hover:scale-105 transition">
+Carrito
+</a>
+
+</div>
+</div>
+</nav>
+
+
+<section class="relative py-24 overflow-hidden">
+
+<div class="absolute inset-0">
+<img src="https://portal-ambiental.com/wp-content/uploads/2021/05/Everbrush-zoom-out-v2-1.gif"
+class="w-full h-full object-cover brightness-50">
+</div>
+
+<div class="relative max-w-7xl mx-auto px-6 text-center text-white fade-up">
+
+<p class="text-sm tracking-widest uppercase opacity-80">
+Importado desde Japón 🇯🇵
+</p>
+
+<h1 class="text-4xl md:text-6xl font-bold mt-4">
+Alternativa sostenible para tu <span class="text-green-300">sonrisa</span>
+</h1>
+
+<p class="mt-4 text-lg text-gray-200 max-w-2xl mx-auto">
+Cepillos de bambú 100% naturales. Cuidamos tu sonrisa y el planeta 🌱
+</p>
+
+</div>
+</section>
+
+
+<section class="py-20 text-center">
+<h2 class="text-3xl font-bold text-bamboo-green">¿Por qué BambooZen?</h2>
+<p class="max-w-2xl mx-auto mt-4 text-gray-600">
+Cambiamos el plástico por bambú natural. Productos ecológicos, duraderos y de calidad japonesa.
+</p>
+</section>
+
+<section class="py-20 bg-[#f6f2e8] text-center">
+
+<h2 class="text-3xl font-bold text-bamboo-green">Modo de uso</h2>
+
+<div class="mt-10 max-w-4xl mx-auto grid md:grid-cols-3 gap-6 px-6">
+
+<div class="bg-white shadow-lg rounded-2xl p-6">
+<h3 class="font-bold text-bamboo-green">1. Humedece</h3>
+<p class="text-gray-600 mt-2">Moja las cerdas antes de usarlo.</p>
+</div>
+
+<div class="bg-white shadow-lg rounded-2xl p-6">
+<h3 class="font-bold text-bamboo-green">2. Cepilla</h3>
+<p class="text-gray-600 mt-2">Cepilla durante 2 minutos.</p>
+</div>
+
+<div class="bg-white shadow-lg rounded-2xl p-6">
+<h3 class="font-bold text-bamboo-green">3. Seca</h3>
+<p class="text-gray-600 mt-2">Déjalo secar en lugar ventilado.</p>
+</div>
+
+</div>
+</section>
+
+
+<section class="py-20 text-center">
+
+<h2 class="text-3xl font-bold text-bamboo-green">Producto destacado</h2>
+
+<div class="mt-10 flex justify-center">
+
+<div class="flip-card">
+<div class="flip-inner">
+
+<div class="flip-front">
+<h3 class="text-xl font-bold">Cepillo BambooZen</h3>
+<p class="mt-2">100% ecológico 🌱</p>
+<p class="mt-2 text-sm">Bambú natural</p>
+</div>
+
+<div class="flip-back">
+<img src="Paq.familiar.jpeg" alt="bamboo">
+</div>
+
+</div>
+</div>
+
+</div>
+</section>
+
+
+<footer class="bg-black text-white text-center py-10">
+
+<h3 class="text-xl font-bold mb-4">Contacto</h3>
+
+<p class="mb-2">
+<a href="mailto:bamboozen6@gmail.com" class="icon email">
+<i class="fa-solid fa-envelope"></i> bamboozen6@gmail.com
+</a>
+</p>
+
+<p>
+<a href="https://www.facebook.com/people/bamboozen/61582193074768/" target="_blank" class="icon facebook">
+<i class="fa-brands fa-facebook"></i> Facebook
+</a>
+</p>
+
+</footer>
+
+</body>
+</html>
