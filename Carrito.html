@@ -1,31 +1,271 @@
+<!DOCTYPE html>
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
 <title>Carrito - BambooZen</title>
 
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* GENERAL */
+
+body{
+margin: 0;
+font-family: Arial, sans-serif;
+background: #f4f8f2;
+color: #333;
+}
+
+/* HEADER */
+
+header{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 40px;
+background: #2f5e3b;
+}
+
+.logo{
+font-size: 28px;
+font-weight: bold;
+color: white;
+}
+
+nav a{
+color: white;
+text-decoration: none;
+margin-left: 20px;
+font-weight: bold;
+transition: 0.3s;
+}
+
+nav a:hover{
+color: #d4ffd9;
+}
+
+/* CARRITO */
+
+.carrito{
+padding: 60px 20px;
+text-align: center;
+}
+
+.carrito h2{
+font-size: 40px;
+margin-bottom: 30px;
+color: #2f5e3b;
+}
+
+#lista{
+list-style: none;
+padding: 0;
+max-width: 600px;
+margin: auto;
+}
+
+#lista li{
+background: white;
+padding: 18px;
+margin-bottom: 15px;
+border-radius: 15px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+#lista button{
+background: #ff4d4d;
+border: none;
+padding: 8px 12px;
+border-radius: 10px;
+color: white;
+cursor: pointer;
+}
+
+#total{
+color: #2f5e3b;
+font-size: 28px;
+}
+
+/* PAGO */
+
+.pago{
+background: white;
+max-width: 600px;
+margin: 40px auto;
+padding: 30px;
+border-radius: 20px;
+box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.pago h3{
+margin-bottom: 20px;
+color: #2f5e3b;
+}
+
+.pago-options{
+display: flex;
+justify-content: center;
+gap: 20px;
+margin-bottom: 25px;
+flex-wrap: wrap;
+}
+
+.pago-options label{
+background: #f2f2f2;
+padding: 15px 20px;
+border-radius: 15px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+.pago-options label:hover{
+background: #dff5e4;
+}
+
+.btn-finalizar{
+background: #2f5e3b;
+color: white;
+border: none;
+padding: 15px 30px;
+border-radius: 15px;
+font-size: 16px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+.btn-finalizar:hover{
+background: #3d7a4d;
+transform: scale(1.05);
+}
+
+/* FORMULARIO */
+
+.formulario{
+padding: 80px 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.form-container{
+background: white;
+padding: 40px;
+border-radius: 25px;
+width: 90%;
+max-width: 600px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+text-align: center;
+}
+
+.form-container h2{
+font-size: 32px;
+margin-bottom: 10px;
+color: #2f5e3b;
+}
+
+.texto-form{
+color: #666;
+margin-bottom: 30px;
+}
+
+.input-group{
+display: flex;
+align-items: center;
+background: #f2f2f2;
+padding: 15px;
+border-radius: 15px;
+margin-bottom: 20px;
+}
+
+.input-group i{
+margin-right: 12px;
+color: #2f5e3b;
+font-size: 18px;
+}
+
+.input-group input,
+.input-group textarea{
+border: none;
+background: transparent;
+width: 100%;
+outline: none;
+font-size: 16px;
+}
+
+.input-group textarea{
+height: 120px;
+resize: none;
+}
+
+.form-container button{
+background: #2f5e3b;
+color: white;
+border: none;
+padding: 15px 30px;
+border-radius: 15px;
+font-size: 16px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+.form-container button:hover{
+background: #3d7a4d;
+transform: scale(1.05);
+}
+
+/* FOOTER */
+
+.footer-carrito{
+margin-top: 60px;
+text-align: center;
+color: #333;
+}
+
+.footer-carrito h3{
+color: #2f5e3b;
+}
+
+.footer-carrito a{
+text-decoration: none;
+color: #2f5e3b;
+font-weight: bold;
+}
+
+.copy{
+margin-top: 20px;
+font-size: 14px;
+color: #777;
+}
+
+</style>
 
 </head>
 
 <body>
 
-
 <header>
+
 <div class="logo">BambooZen</div>
 
 <nav>
 <a href="index.html">Inicio</a>
-<a href="Nosotros.html">Nosotros</a>
-<a href="Tienda.html">Tienda</a>
-<a href="Carrito.html">Carrito 🛒</a>
+<a href="nosotros.html">Nosotros</a>
+<a href="tienda.html">Tienda</a>
+<a href="carrito.html">Carrito 🛒</a>
 </nav>
+
 </header>
 
 
-<section class="Carrito">
+<section class="carrito">
 
-<h2>Tu Carrito 🛒</h2>
+<h2>Tu carrito 🛒</h2>
 
 <ul id="lista"></ul>
 
@@ -38,15 +278,18 @@
 <div class="pago-options">
 
 <label>
-<input type="radio" name="pago" value="tarjeta"> 💳 Tarjeta
+<input type="radio" name="pago" value="tarjeta">
+💳 Tarjeta
 </label>
 
 <label>
-<input type="radio" name="pago" value="paypal"> 🅿️ PayPal
+<input type="radio" name="pago" value="paypal">
+🅿️ PayPal
 </label>
 
 <label>
-<input type="radio" name="pago" value="efectivo"> 💵 Efectivo
+<input type="radio" name="pago" value="efectivo">
+💵 Efectivo
 </label>
 
 </div>
@@ -60,65 +303,172 @@ Finalizar compra
 </section>
 
 
+
+<!-- FORMULARIO -->
+
 <section class="formulario">
 
-<h2>Opinión</h2>
+<div class="form-container">
+
+<h2>💬 Déjanos tu opinión</h2>
+
+<p class="texto-form">
+Tu opinión nos ayuda a mejorar BambooZen 🌱
+</p>
 
 <form>
-<input type="text" placeholder="Tu nombre" required><br><br>
-<input type="email" placeholder="Tu correo" required><br><br>
-<textarea placeholder="Escribe tu mensaje..." required></textarea><br><br>
-<button type="submit">Enviar</button>
+
+<div class="input-group">
+<i class="fa-solid fa-user"></i>
+<input type="text" placeholder="Tu nombre" required>
+</div>
+
+<div class="input-group">
+<i class="fa-solid fa-envelope"></i>
+<input type="email" placeholder="Tu correo" required>
+</div>
+
+<div class="input-group">
+<i class="fa-solid fa-comment"></i>
+
+<textarea placeholder="Escribe tu mensaje..." required></textarea>
+
+</div>
+
+<button type="submit">
+Enviar opinión ✨
+</button>
+
 </form>
 
-</section>
+</div>
 
 
-<footer>
+
+<!-- FOOTER -->
+
+<footer class="footer-carrito">
 
 <h3>Contacto</h3>
 
 <p>
-<a href="mailto:bamboozen6@gmail.com" class="icon email">
-<i class="fa-solid fa-envelope"></i> bamboozen6@gmail.com
+<a href="mailto:bamboozen6@gmail.com">
+<i class="fa-solid fa-envelope"></i>
+bamboozen6@gmail.com
 </a>
 </p>
 
 <p>
-<a href="https://www.facebook.com/people/bamboozen/61582193074768/" target="_blank" class="icon facebook">
-<i class="fa-brands fa-facebook"></i> Facebook
+<a href="https://www.facebook.com/people/bamboozen/61582193074768/"
+target="_blank">
+
+<i class="fa-brands fa-facebook"></i>
+Facebook
+
 </a>
+</p>
+
+<p class="copy">
+© 2026 BambooZen 🌱
 </p>
 
 </footer>
 
+</section>
 
-<script src="carrito.js"></script>
 
 
 <script>
+
+/* CARRITO */
+
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+function agregarCarrito(nombre, precio) {
+
+carrito.push({nombre, precio});
+
+localStorage.setItem("carrito", JSON.stringify(carrito));
+
+alert("Producto agregado 🛒");
+
+}
+
+function eliminarProducto(index) {
+
+carrito.splice(index, 1);
+
+localStorage.setItem("carrito", JSON.stringify(carrito));
+
+mostrarCarrito();
+
+}
+
+function mostrarCarrito() {
+
+let lista = document.getElementById("lista");
+
+let total = 0;
+
+if (!lista) return;
+
+lista.innerHTML = "";
+
+carrito.forEach((producto, index) => {
+
+let li = document.createElement("li");
+
+li.innerHTML = `
+${producto.nombre} - $${producto.precio}
+<button onclick="eliminarProducto(${index})">❌</button>
+`;
+
+lista.appendChild(li);
+
+total += producto.precio;
+
+});
+
+document.getElementById("total").textContent = total;
+
+}
+
+mostrarCarrito();
+
+
+
+/* FINALIZAR COMPRA */
+
 function finalizarCompra() {
 
 let metodo = document.querySelector('input[name="pago"]:checked');
 
 if (!metodo) {
-  alert("Selecciona un método de pago");
-  return;
+
+alert("Selecciona un método de pago");
+
+return;
+
 }
 
 let items = document.querySelectorAll("#lista li");
 
 if (items.length === 0) {
-  alert("Tu carrito está vacío");
-  return;
+
+alert("Tu carrito está vacío");
+
+return;
+
 }
 
 alert("Compra realizada con " + metodo.value + " 🛒\nGracias por BambooZen 🌱");
 
 localStorage.removeItem("carrito");
+
 location.reload();
 
 }
+
 </script>
 
 </body>
